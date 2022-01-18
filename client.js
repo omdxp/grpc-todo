@@ -22,6 +22,12 @@ client.createTodo(
 );
 
 client.readTodos({}, (err, response) => {
-  console.log("Received from server " + JSON.stringify(response));
-  response.items.forEach((item) => console.log(item.text));
+  if (response.items) response.items.forEach((item) => console.log(item.text));
 });
+
+const call = client.readTodosStream();
+call.on("data", (item) =>
+  console.log("received item from server " + item.text)
+);
+
+call.on("end", () => console.log("server has finished sending"));
