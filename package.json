@@ -2,14 +2,22 @@
   "name": "grpc-todo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ."
   },
-  "keywords": [],
+  "keywords": [
+    "grpc",
+    "todo",
+    "protobuf"
+  ],
   "author": {
     "name": "Omar Belghaouti",
     "email": "omarbelghaouti@gmail.com"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.6.9",
+    "grpc": "^1.24.11"
+  }
 }

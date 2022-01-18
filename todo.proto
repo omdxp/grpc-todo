@@ -4,7 +4,7 @@ package todoPackage;
 
 service Todo {
     rpc createTodo( TodoItem ) returns ( TodoItem );
-    rpc readTodos() returns ( TodoItems )
+    rpc readTodos( void ) returns ( TodoItems );
 }
 
 message void {}
